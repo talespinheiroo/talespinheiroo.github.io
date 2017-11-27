@@ -1,0 +1,44 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view2">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">2</div>
+      <h1>Web Components</h1>
+      <p>Overson e Strimpel (2015) cita as quatro especificações da W3C que formam os web components. Sendo elas: </p>
+      <ul>
+		<li>Custom elements: especificação que permite que se crie a sua própria tag HTML. Exemplo: <meu-componente></li>
+		<li>Templates: Permite definer blocos de códigos que são reutilizáveis podendo inserir elementos dinâmicos.</li>
+		<li>Shadow DOM: oferece uma maneira de encapsular o HTML e o CSS por exemplo de forma em que fique separada do DOM. </li>
+		<li>HTML imports: permite importar componentes HTML da mesma maneira que CSS e JavaScript separados.</li>
+	  </ul>
+    </div>
+  </template>
+
+  <script>
+    class MyView2 extends Polymer.Element {
+      static get is() { return 'my-view2'; }
+    }
+
+    window.customElements.define(MyView2.is, MyView2);
+  </script>
+</dom-module>

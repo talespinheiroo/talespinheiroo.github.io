@@ -1,0 +1,38 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">1</div>
+      <h1>Visão Geral</h1>
+      <p align="justify">O reuso na área de desenvolvimento de softwares é utilizado a um bom tempo, e com o passar dos anos passou a se tornar cada vez mais modular graças a ideia de componentização. Por sua vez, a componentização atingiu os diversos campos da área de desenvolvimento de softwares até chegar ao desenvolvimento web front-end através de frameworks e bibliotecas. Atualmente graças a quatro especificações da W3C surgiram recentemente os web components, que provê ainda mais granularidade para o desenvolvimento front-end. A ideia presente neste trabalho é prover um processo de desenvolvimento web front-end que faça uso dos web components, sendo uma tecnologia com potencial forte porém ainda um pouco inexplorada pelos desenvolvedores front-end. Para tal, foi realizado estudos e uma análise com as abordagens de desenvolvimento que possuíam afinidade com o que se buscava propor e lidar neste trabalho. Ao final, foram elaboradas 7 etapas que norteiam o desenvolvimento front-end e realiza o tratamento de componentes web.</p>
+    </div>
+  </template>
+
+  <script>
+    class MyView1 extends Polymer.Element {
+      static get is() { return 'my-view1'; }
+    }
+
+    window.customElements.define(MyView1.is, MyView1);
+  </script>
+</dom-module>
